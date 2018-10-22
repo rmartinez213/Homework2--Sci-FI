@@ -42,7 +42,8 @@ public class WanderingAnim : MonoBehaviour
     void Start()
     {
         _aliveAnim = true;
-        agent = GetComponent<NavMeshAgent>();        GotoNextPoint();
+        agent = GetComponent<NavMeshAgent>();
+        GotoNextPoint();
     }
 
 
@@ -64,7 +65,8 @@ public class WanderingAnim : MonoBehaviour
                     //print("The other transform is close to me!");
                     //Debug.Log("THE PLAYERS Y VALUE: " + transform.position);
                     transform.LookAt(GameObject.Find("Player").transform.position);
-                    agent.destination = GameObject.Find("Player").transform.position;
+                    agent.destination = GameObject.Find("Player").transform.position;
+
                 }
                 //has not seen me so just patrol
                 else
@@ -124,5 +126,6 @@ public class WanderingAnim : MonoBehaviour
 
 
 }
-
+
+
 
