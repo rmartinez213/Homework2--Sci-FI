@@ -23,7 +23,7 @@ public class WanderingAnim : MonoBehaviour
         if (_aliveAnim)
         {
             _animator = GetComponent<Animator>();
-            transform.Translate(0, 0, speed * Time.deltaTime); //move forward
+            //transform.Translate(0, 0, speed * Time.deltaTime); //move forward
 
             if (GameObject.Find("Player") && GameObject.Find("Player").GetComponent<PlayerCharacter>()._health >= 0)
             {
@@ -31,9 +31,9 @@ public class WanderingAnim : MonoBehaviour
                 float sqrLen = offset.sqrMagnitude;
                 if (sqrLen < closeDistance * closeDistance)
                 {
-                    print("The other transform is close to me!");
-                    Debug.Log("THE PLAYERS Y VALUE: " + transform.position);
-                    transform.LookAt(new Vector3(GameObject.Find("Player").transform.position.x, -0.0f, GameObject.Find("Player").transform.position.z));
+                    //print("The other transform is close to me!");
+                    //Debug.Log("THE PLAYERS Y VALUE: " + transform.position);
+                     transform.LookAt(GameObject.Find("Player").transform.position);
                 }
             }
 
@@ -46,15 +46,15 @@ public class WanderingAnim : MonoBehaviour
                 {
                     if (GameObject.Find("Player").transform.position != null)
                     {
-                        Debug.Log("The player position is " + GameObject.Find("Player").transform.position);
+                        //Debug.Log("The player position is " + GameObject.Find("Player").transform.position);
                     }
-                    transform.LookAt(new Vector3(GameObject.Find("Player").transform.position.x, -0.0f, GameObject.Find("Player").transform.position.z));
+                     transform.LookAt(GameObject.Find("Player").transform.position);
                     //PlayerCharacter playerPosition = GetComponent<PlayerCharacter>();
                     if (_fireball == null)
                     {
 
 
-                        transform.LookAt(new Vector3(GameObject.Find("Player").transform.position.x, -0.0f, GameObject.Find("Player").transform.position.z));
+                         transform.LookAt(GameObject.Find("Player").transform.position);
                         _fireball = Instantiate(fireballPrefab) as GameObject;
                         _fireball.transform.position = transform.TransformPoint(0, 1, 1 * 1.5f);
                         _fireball.transform.rotation = transform.rotation;
@@ -63,11 +63,12 @@ public class WanderingAnim : MonoBehaviour
                 else if (hit.distance < obstacleRange)
                 {
                     float angle = Random.Range(-110, 110);
-                    transform.Rotate(0, angle, 0);
+                    //transform.Rotate(0, angle, 0);
                 }
             }
         }
         else {
+            Debug.Log("The enemy 1 is DEAD");
             _animator.SetBool("isDead", true);
         }
 

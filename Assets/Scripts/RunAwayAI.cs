@@ -19,18 +19,24 @@ public class RunAwayAI : MonoBehaviour
     public Transform target;
     private bool _alive;
     private bool _isSeen;
+    //private bool _aliveAnim;
+    private Animator _animator;
 
     void Start()
     {
         _alive = true;
+        //_animator.SetBool("isDeadBy", false);
     }
 
     void Update()
     {
         if (_alive)
         {
+            _animator = GetComponent<Animator>();
+
             if (_isSeen)
             {
+
                 transform.Translate(0, 0, speed * Time.deltaTime); // will not move 
             }
 
@@ -55,6 +61,7 @@ public class RunAwayAI : MonoBehaviour
                     transform.Rotate(0, Random.Range(180, 360), 0);
                     //transform.Translate(0, 0, speed * Time.deltaTime);
                     _isSeen = true;
+                    _animator.SetBool("isSeen", true);
                     if (GameObject.Find("Player").transform.position != null)
                     {
                         Debug.Log("The player position is " + GameObject.Find("Player").transform.position);
@@ -64,11 +71,11 @@ public class RunAwayAI : MonoBehaviour
                     if (_fireball == null)
                     {
 
-                       
-                       // transform.LookAt(GameObject.Find("Player").transform.position);
-                       // _fireball = Instantiate(fireballPrefab) as GameObject;
-                       // _fireball.transform.position = transform.TransformPoint(Vector3.forward * 1.5f);
-                       // _fireball.transform.rotation = transform.rotation;
+
+                        // transform.LookAt(GameObject.Find("Player").transform.position);
+                        // _fireball = Instantiate(fireballPrefab) as GameObject;
+                        // _fireball.transform.position = transform.TransformPoint(Vector3.forward * 1.5f);
+                        // _fireball.transform.rotation = transform.rotation;
                     }
                 }
                 else if (hit.distance < obstacleRange)
@@ -77,6 +84,10 @@ public class RunAwayAI : MonoBehaviour
                     transform.Rotate(0, angle, 0);
                 }
             }
+        }
+        else
+        {
+            _animator.SetBool("isDeadBy", true);
         }
     }
 

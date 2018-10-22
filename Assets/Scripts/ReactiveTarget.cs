@@ -39,13 +39,13 @@ public class ReactiveTarget : MonoBehaviour {
 
 	private IEnumerator Die() {
 
-		this.transform.Rotate(-90, 0, 0);
+		//this.transform.Rotate(-90, 0, 0);
         //What I added
 		//Vector3 pos = transform.position;
 		//pos.y = -1.25f;
 		//this.transform.position = pos;
 
-		yield return new WaitForSeconds(1.5f);
+		yield return new WaitForSeconds(3.5f);
         Destroy(this.gameObject);
     }
 
