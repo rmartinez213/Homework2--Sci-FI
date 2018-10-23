@@ -18,6 +18,7 @@ public class HidingAI : MonoBehaviour
     private GameObject _fireball;
     public Transform target;
     private bool _alive;
+    private Animator _animator;
 
     void Start()
     {
@@ -28,10 +29,12 @@ public class HidingAI : MonoBehaviour
     {
         if (_alive)
         {
+            _animator = GetComponent<Animator>();
             //transform.Translate(0, 0, speed * Time.deltaTime); // since enemy hides, no need to move
 
             //If player is next to enemy2it shall lock on to them
-			if (GameObject.Find("Player") && GameObject.Find("Player").GetComponent<PlayerCharacter>()._health >= 0) {
+            if (GameObject.Find("Player") && GameObject.Find("Player").GetComponent<PlayerCharacter>()._health >= 0)
+            {
                 Vector3 offset = GameObject.Find("Player").transform.position - transform.position;
                 float sqrLen = offset.sqrMagnitude;
                 if (sqrLen < closeDistance * closeDistance)
@@ -45,7 +48,7 @@ public class HidingAI : MonoBehaviour
             if (Physics.SphereCast(ray, 0.75f, out hit))
             {
                 GameObject hitObject = hit.transform.gameObject;
-				if (hitObject.GetComponent<PlayerCharacter>() && hitObject.GetComponent<PlayerCharacter>()._health >= 0)
+                if (hitObject.GetComponent<PlayerCharacter>() && hitObject.GetComponent<PlayerCharacter>()._health >= 0)
                 {
                     if (GameObject.Find("Player").transform.position != null)
                     {
@@ -59,7 +62,7 @@ public class HidingAI : MonoBehaviour
 
                         transform.LookAt(GameObject.Find("Player").transform.position);
                         _fireball = Instantiate(fireballPrefab) as GameObject;
-                        _fireball.transform.position = transform.TransformPoint(Vector3.forward * 1.5f);
+                        _fireball.transform.position = transform.TransformPoint(0, 0.5f, 1 * 1.5f);
                         _fireball.transform.rotation = transform.rotation;
                     }
                 }
@@ -69,6 +72,10 @@ public class HidingAI : MonoBehaviour
                     transform.Rotate(0, angle, 0);
                 }
             }
+        }
+        else
+        {
+            _animator.SetBool("isDeadCa", true);
         }
     }
 

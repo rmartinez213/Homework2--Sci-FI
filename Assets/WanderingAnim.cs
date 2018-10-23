@@ -78,38 +78,40 @@ public class WanderingAnim : MonoBehaviour
 
             }
 
-        }
 
-        Ray ray = new Ray(transform.position, transform.forward);
-        RaycastHit hit;
-        if (Physics.SphereCast(ray, 0.75f, out hit))
-        {
-            GameObject hitObject = hit.transform.gameObject;
-            if (hitObject.GetComponent<PlayerCharacter>() && hitObject.GetComponent<PlayerCharacter>()._health >= 0)
+
+            Ray ray = new Ray(transform.position, transform.forward);
+            RaycastHit hit;
+            if (Physics.SphereCast(ray, 0.75f, out hit))
             {
-                if (GameObject.Find("Player").transform.position != null)
+                GameObject hitObject = hit.transform.gameObject;
+                if (hitObject.GetComponent<PlayerCharacter>() && hitObject.GetComponent<PlayerCharacter>()._health >= 0)
                 {
-                    //Debug.Log("The player position is " + GameObject.Find("Player").transform.position);
-                }
-                transform.LookAt(GameObject.Find("Player").transform.position);
-                //PlayerCharacter playerPosition = GetComponent<PlayerCharacter>();
-                if (_fireball == null)
-                {
-
-
+                    if (GameObject.Find("Player").transform.position != null)
+                    {
+                        //Debug.Log("The player position is " + GameObject.Find("Player").transform.position);
+                    }
                     transform.LookAt(GameObject.Find("Player").transform.position);
-                    _fireball = Instantiate(fireballPrefab) as GameObject;
-                    _fireball.transform.position = transform.TransformPoint(0, 1, 1 * 1.5f);
-                    _fireball.transform.rotation = transform.rotation;
+                    //PlayerCharacter playerPosition = GetComponent<PlayerCharacter>();
+                    if (_fireball == null)
+                    {
+
+
+                        transform.LookAt(GameObject.Find("Player").transform.position);
+                        _fireball = Instantiate(fireballPrefab) as GameObject;
+                        _fireball.transform.position = transform.TransformPoint(0, 1, 1 * 1.5f);
+                        _fireball.transform.rotation = transform.rotation;
+                    }
+                }
+                else if (hit.distance < obstacleRange)
+                {
+                    float angle = Random.Range(-110, 110);
+                    //transform.Rotate(0, angle, 0);
                 }
             }
-            else if (hit.distance < obstacleRange)
-            {
-                float angle = Random.Range(-110, 110);
-                //transform.Rotate(0, angle, 0);
-            }
-        }
 
+          
+        }
         else
         {
             Debug.Log("The enemy 1 is DEAD");

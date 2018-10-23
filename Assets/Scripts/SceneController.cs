@@ -33,6 +33,18 @@ public class SceneController : MonoBehaviour
     // & (-36,1,-25).0f & (-100.0f,1.0f,-12.0f) 
 
     // for 2nd enemy
+    Vector3[] bystanderSpawn = { new Vector3 { x = -11.75f, y = 0.2f, z = 32.0f },
+                         new Vector3 { x = -20.0f, y = 0.2f, z = 35.0f },
+                         new Vector3 { x = -20.0f, y = 0.2f, z = 26.0f },
+                         new Vector3 { x = 6.0f, y = 0.2f, z = -0.3f },
+                         new Vector3 { x = 4.25f, y = 0.2f, z = -8.5f },//
+                         new Vector3 { x = -12.0f, y = 0.2f, z = -31.0f },//
+                         new Vector3 { x = -12.0f, y = 0.2f, z = -50.0f },//
+                         new Vector3 { x = -12.0f, y = 0.2f, z = -56.0f }, //
+                         new Vector3 { x = -5.0f, y = 0.2f, z = -56.0f }, //
+                         new Vector3 { x = -8.0f, y = 0.2f, z = -32.0f } };
+
+    //for enemy1
     Vector3[] randomPos = new Vector3[4];
     Vector3[] positions = { new Vector3 { x = -34.0f, y = 0.19f, z = -25.0f },
                          new Vector3 { x = -34.0f, y = 0.19f, z = -12.0f },
@@ -44,9 +56,22 @@ public class SceneController : MonoBehaviour
                          new Vector3 { x = -100.0f, y = 4.2f, z = 4.5f },
                          new Vector3 { x = -26.0f, y = 0.19f, z = -12.0f },
                          new Vector3 { x = -100.0f, y =  0.19f, z = -12.0f }
-
-
     };
+
+    //for enemy3
+    Vector3[] camperSpawn = { new Vector3 { x = -10.0f, y = 0.19f, z = 13.0f },
+                         new Vector3 { x = -13.5f, y = 0.19f, z = 17.0f },
+                         new Vector3 { x = -13.0f, y = 0.19f, z = 21.5f },
+                         new Vector3 { x = -2.75f, y = 0.19f, z = -2.0f },//
+                         new Vector3 { x = -2.5f, y = 0.19f, z = 2.0f },//
+                         new Vector3 { x = -10.0f, y = 0.19f, z = -6.0f },//
+                         new Vector3 { x = -10.0f, y = 0.19f, z = -9.5f },//
+                         new Vector3 { x = 25.0f, y = 0.19f, z = -5.5f },//
+                         new Vector3 { x = 23.0f, y = 0.19f, z = -9.0f },
+                         new Vector3 { x = 3.5f, y =  0.19f, z = -9.0f }
+    };
+
+
 
     //init fnc, set up the scene with a random # of enemy of 3 random types
     void Start() {
@@ -83,20 +108,24 @@ public class SceneController : MonoBehaviour
             }
             else if (randomEnemyType == 2)
             {
-                int randomEnemy2location = Random.Range(0,4);
+                int chooseSpawn = Random.Range(0, 10);
+                int randomEnemy2location = Random.Range(0, 4);
                 listOfEnemies[i] = Instantiate(enemy2Prefab) as GameObject;
-                listOfEnemies[i].transform.position = new Vector3(randomPos[randomEnemy2location].x, -0.737f, randomPos[randomEnemy2location].z);
+                listOfEnemies[i].transform.position = camperSpawn[chooseSpawn];
                 float angle = Random.Range(0, 360);
                 listOfEnemies[i].transform.Rotate(0, angle, 0);
             }
             else if (randomEnemyType == 3)
             {
+                int chooseSpawn = Random.Range(0, 10);
                 Xrange = Random.Range(35, 44);
                 Zrange = Random.Range(-28, 14);
                 listOfEnemies[i] = Instantiate(enemy3Prefab) as GameObject;
-                listOfEnemies[i].transform.position = new Vector3(Xrange, -0.737f, Zrange);
+                listOfEnemies[i].transform.position = bystanderSpawn[chooseSpawn];
+                Debug.Log("This is where the enemy " + bystanderSpawn[chooseSpawn]);
+                Debug.Log("But the curr position is : "+ listOfEnemies[i].transform.position);
                 float angle = Random.Range(0, 360);
-                listOfEnemies[i].transform.Rotate(0, angle, 0);
+                //listOfEnemies[i].transform.Rotate(0, angle, 0);
             }
 
         }
@@ -140,20 +169,24 @@ public class SceneController : MonoBehaviour
                 }
                 else if (randomEnemyType == 2)
                 {
+                    int chooseSpawn = Random.Range(0, 10);
                     int randomEnemy2location = Random.Range(0, 4);
                     listOfEnemies[i] = Instantiate(enemy2Prefab) as GameObject;
-                    listOfEnemies[i].transform.position = new Vector3(randomPos[randomEnemy2location].x, -0.737f, randomPos[randomEnemy2location].z);
+                    listOfEnemies[i].transform.position = camperSpawn[chooseSpawn];
                     float angle = Random.Range(0, 360);
                     listOfEnemies[i].transform.Rotate(0, angle, 0);
                 }
                 else if (randomEnemyType == 3)
                 {
+                    int chooseSpawn = Random.Range(0, 10);
                     Xrange = Random.Range(35, 44);
                     Zrange = Random.Range(-28, 14);
                     listOfEnemies[i] = Instantiate(enemy3Prefab) as GameObject;
-                    listOfEnemies[i].transform.position = new Vector3(Xrange, -0.737f, Zrange);
+                    listOfEnemies[i].transform.position = bystanderSpawn[chooseSpawn];
                     float angle = Random.Range(0, 360);
-                    listOfEnemies[i].transform.Rotate(0, angle, 0);
+                    Debug.Log("This is where the enemy " + bystanderSpawn[chooseSpawn]);
+                    Debug.Log("But the curr position is : " + listOfEnemies[i].transform.position);
+                    //listOfEnemies[i].transform.Rotate(0, angle, 0);
                 }
             }
         }
@@ -200,20 +233,24 @@ public class SceneController : MonoBehaviour
                 }
                 else if (randomEnemyType == 2)
                 {
+                    int chooseSpawn = Random.Range(0, 10);
                     int randomEnemy2location = Random.Range(0, 4);
                     listOfEnemies[i] = Instantiate(enemy2Prefab) as GameObject;
-                    listOfEnemies[i].transform.position = new Vector3(randomPos[randomEnemy2location].x, -0.737f, randomPos[randomEnemy2location].z);
+                    listOfEnemies[i].transform.position = camperSpawn[chooseSpawn];
                     float angle = Random.Range(0, 360);
                     listOfEnemies[i].transform.Rotate(0, angle, 0);
                 }
                 else if (randomEnemyType == 3)
                 {
+                    int chooseSpawn = Random.Range(0, 10);
                     Xrange = Random.Range(35, 44);
                     Zrange = Random.Range(-28, 14);
                     listOfEnemies[i] = Instantiate(enemy3Prefab) as GameObject;
-                    listOfEnemies[i].transform.position = new Vector3(Xrange, -0.737f, Zrange);
+                    listOfEnemies[i].transform.position = bystanderSpawn[chooseSpawn];
                     float angle = Random.Range(0, 360);
-                    listOfEnemies[i].transform.Rotate(0, angle, 0);
+                    Debug.Log("This is where the enemy " + bystanderSpawn[chooseSpawn]);
+                    Debug.Log("But the curr position is : " + listOfEnemies[i].transform.position);
+                    //listOfEnemies[i].transform.Rotate(0, angle, 0);
                 }
             }
         }
