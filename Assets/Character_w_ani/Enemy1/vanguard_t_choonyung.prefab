@@ -689,7 +689,7 @@ GameObject:
   - component: {fileID: 136543509551308616}
   m_Layer: 0
   m_Name: vanguard_t_choonyung
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2058,6 +2058,7 @@ MonoBehaviour:
   speed: 3
   obstacleRange: 2
   closeDistance: 15
+  needsHelp: {x: 0, y: 0, z: 0}
   fireballPrefab: {fileID: 0}
   target: {fileID: 0}
 --- !u!114 &114568837441948208
