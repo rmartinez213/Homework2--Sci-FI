@@ -28,7 +28,6 @@ public class Health_Pickup : MonoBehaviour
                 PlayerCharacter player = other.GetComponent<PlayerCharacter>();
                 player.IncreaseHealth(3);
             }
-
         }
     }
 

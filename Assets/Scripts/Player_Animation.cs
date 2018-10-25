@@ -5,7 +5,8 @@ using UnityEngine;
 public class Player_Animation : MonoBehaviour {
     
 	private Animator _animator;
-	private float speed = FPSInput.speed;
+	private float speed = 6.0f;
+	private bool crouch;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +16,37 @@ public class Player_Animation : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
+        //Crouch Toggle
+		if (Input.GetKeyUp(KeyCode.C))
+        {
+			_animator.SetBool("isCrouch", !_animator.GetBool("isCrouch"));
+
+			if(_animator.GetBool("isCrouch")){
+				Camera.main.transform.Translate(0, -0.8f, 0.1f);
+			}
+			else{
+				Camera.main.transform.Translate(0, 0.8f, -0.1f);
+			}
+        }
+
+        //Crouch Walking Forward
+		if (_animator.GetBool("isCrouch") && Input.GetKey(KeyCode.W))
+        {
+			_animator.SetBool("isCrouchWalking", true);
+        }
+		else{
+			_animator.SetBool("isCrouchWalking", false);
+		}
+
+        //Crouch Walking Back
+		if (_animator.GetBool("isCrouch") && Input.GetKey(KeyCode.S))
+        {
+			_animator.SetBool("isCrouchWalkingBackward", true);
+        }
+        else
+        {
+			_animator.SetBool("isCrouchWalkingBackward", false);
+        }
 
 
        
@@ -56,7 +88,6 @@ public class Player_Animation : MonoBehaviour {
 
         //Animation for right strafe
 		if(Input.GetKey(KeyCode.D) && !Input.GetKeyUp(KeyCode.A) && !Input.GetKeyUp(KeyCode.W) && !Input.GetKeyUp(KeyCode.S)){
-			Debug.Log("Strafing right");
 			_animator.SetBool("isStrafingRight", true);
 		}
 		else{
@@ -66,7 +97,7 @@ public class Player_Animation : MonoBehaviour {
 
 		//Animation for left strafe
 		if (Input.GetKey(KeyCode.A) && !Input.GetKeyUp(KeyCode.D) && !Input.GetKeyUp(KeyCode.W) && !Input.GetKeyUp(KeyCode.S)){
-            Debug.Log("Strafing right");
+ 
             _animator.SetBool("isStrafingLeft", true);
         }
         else{
@@ -79,6 +110,7 @@ public class Player_Animation : MonoBehaviour {
 		else{
 			_animator.SetBool("isShooting", false);
 		}
+
 
 	}
 }

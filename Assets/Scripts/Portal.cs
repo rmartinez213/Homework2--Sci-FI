@@ -16,8 +16,11 @@ public class Portal : MonoBehaviour {
 
     //On trigger, so that when player enters colider, it teleports to 1 of 10 predifined spots
 	void OnTriggerEnter(Collider Player){
-		Portal_index = Random.Range(0, portals.Length);
-		Player.transform.position = portals[Portal_index].position;
-		Debug.Log(Portal_index);
+		if (Player.CompareTag("Player"))
+		{
+			Portal_index = Random.Range(0, portals.Length);
+			Player.transform.position = portals[Portal_index].position;
+			Debug.Log(Portal_index);
+		}
 	}
 }

@@ -3,10 +3,14 @@ using System.Collections;
 
 public class PlayerCharacter : MonoBehaviour
 {
-    public int _health;
+	public int _health = 0;
+
+	//Attach all game objects
     public GameObject spawn;
-    public GameObject HealthObj;
-    public GameObject HealthObj2;
+    public GameObject HealthObject;
+    public GameObject HealthObject2;
+	public GameObject KeyObject;
+	Doorscript DoorObj = new Doorscript();
 
 
     void Start()
@@ -22,12 +26,18 @@ public class PlayerCharacter : MonoBehaviour
         this.gameObject.transform.rotation = spawn.transform.rotation;
         this.gameObject.transform.position = spawn.transform.position;
         GetComponent<FPSInput>().enabled = true;
+        
 
-
-        Health_Pickup Obj = HealthObj.GetComponent<Health_Pickup>();
+        Health_Pickup Obj = HealthObject.GetComponent<Health_Pickup>();
         Obj.HealthReset();
-        Health_Pickup Obj2 = HealthObj2.GetComponent<Health_Pickup>();
+        Health_Pickup Obj2 = HealthObject2.GetComponent<Health_Pickup>();
         Obj2.HealthReset();
+		Key_Pickup keyObj = KeyObject.GetComponent<Key_Pickup>();
+		keyObj.KeyReset();
+        
+		Debug.Log("Before Reset");
+		DoorObj.DoorReset();
+		Debug.Log("After Reset");
 
     }
 
@@ -38,7 +48,8 @@ public class PlayerCharacter : MonoBehaviour
         {
             Debug.ClearDeveloperConsole();
             Debug.Log("Game Restart!");
-            StartAgain();
+
+			StartAgain();
         }
     }
 
@@ -48,14 +59,15 @@ public class PlayerCharacter : MonoBehaviour
     {
         _health -= damage;
 
-        if (_health <= 0) 
+        if (_health <= 0)
         {
             Debug.Log("You are dead!");
             GetComponent<FPSInput>().enabled = false;
             //this.gameObject.SetActive(false);
 
         }
-        else {
+        else
+        {
             GetComponent<FPSInput>().enabled = true;
         }
 
