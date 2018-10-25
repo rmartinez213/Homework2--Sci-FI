@@ -71,6 +71,7 @@ public class RunAwayAI : MonoBehaviour
                     if (GameObject.Find("Player").transform.position != null)
                     {
                         agent.destination = GameObject.Find("HelpStop").transform.position;
+                        print(GameObject.Find("HelpStop").transform.position + " IS THE POSITION BYSTANDER NEEDS TO GO");
                         //Debug.Log("The player position is " + GameObject.Find("Player").transform.position);
                     }
                     //transform.LookAt(GameObject.Find("Player").transform.position);

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player_Animation : MonoBehaviour {
     
 	private Animator _animator;
-	private float speed = FPSInput.speed;
+	private float speed = 6.0f;
 
 	// Use this for initialization
 	void Start () {
