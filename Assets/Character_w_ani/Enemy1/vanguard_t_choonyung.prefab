@@ -689,7 +689,7 @@ GameObject:
   - component: {fileID: 136543509551308616}
   m_Layer: 0
   m_Name: vanguard_t_choonyung
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1559,7 +1559,7 @@ Transform:
   m_GameObject: {fileID: 1678091413993432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10, y: -1.6, z: -30}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4758314966876482}
   - {fileID: 4150400697687688}
@@ -2058,8 +2058,11 @@ MonoBehaviour:
   speed: 3
   obstacleRange: 2
   closeDistance: 15
+  needsHelp: {x: 0, y: 0, z: 0}
   fireballPrefab: {fileID: 0}
   target: {fileID: 0}
+  setDest: {x: 0, y: 0, z: 0}
+  agent: {fileID: 0}
 --- !u!114 &114568837441948208
 MonoBehaviour:
   m_ObjectHideFlags: 1
