@@ -8,6 +8,7 @@ public class HoldCharacter : MonoBehaviour
     //on collision
     void OnTriggerEnter(Collider col)
     {
+        print("It is coliding with this platform");
         col.transform.parent = gameObject.transform;
     }
 
@@ -16,5 +17,6 @@ public class HoldCharacter : MonoBehaviour
         col.transform.parent = null;
     }
 
-
+    //-100, 5, -20 (at platform)
+    //-102, 4.05, -19.55
 }
