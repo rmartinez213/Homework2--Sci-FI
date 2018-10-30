@@ -31063,6 +31063,16 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: -6.27
       objectReference: {fileID: 0}
+    - target: {fileID: 137583483785732442, guid: ca3bd9ae345b2c94188da4e7f7d6fedd,
+        type: 2}
+      propertyPath: m_SkinnedMotionVectors
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137583483785732442, guid: ca3bd9ae345b2c94188da4e7f7d6fedd,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e319fa5cf394204458f684fecf428c1e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca3bd9ae345b2c94188da4e7f7d6fedd, type: 2}
   m_IsPrefabAsset: 0

@@ -144,20 +144,25 @@ ModelImporter:
     13700000: Mdea_mesh
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mdea_MAT
+    second: {fileID: 2100000, guid: e319fa5cf394204458f684fecf428c1e, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: MEDEA diffuse
-    second: {fileID: 2800000, guid: 3f97cd2a9d8823742aa0b1ae248b8e15, type: 3}
+    second: {fileID: 2800000, guid: 273cde0cb20581444a4b966ef2172827, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: MEDEA glow
-    second: {fileID: 2800000, guid: 7bf6c7828392fd645a41f61464c56ec5, type: 3}
+    second: {fileID: 2800000, guid: 4a48aa6ec9caa7e4e95064f307de86f5, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: MEDEA specular
-    second: {fileID: 2800000, guid: 759557538c7863748902693cdd23160e, type: 3}
+    second: {fileID: 2800000, guid: 7a56e76c7ecb30447b58752c46acae32, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
