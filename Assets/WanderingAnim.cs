@@ -88,9 +88,9 @@ public class WanderingAnim : MonoBehaviour
                 //has not seen me so just patrol
                 else
                 {
-                    //int randomPost = Random.Range(0,10);
-                    if (agent.remainingDistance < 0.5f)
-                        GotoNextPoint();
+                    ////int randomPost = Random.Range(0,10);
+                    //if (agent.remainingDistance < 0.5f)
+                    //    GotoNextPoint();
                 }
 
             }
@@ -134,6 +134,7 @@ public class WanderingAnim : MonoBehaviour
         {
             Debug.Log("The enemy 1 is DEAD");
             _animator.SetBool("isDead", true);
+            agent.SetDestination(transform.position);
         }
     }
 
