@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{E070E63A-F016-EBEE-5179-80136429E0DE}|Unit Tests">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HidingAI.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Doorscript.cs" Line="21" Column="40" />
+      <File FileName="Assets/Scripts/PlayerCharacter.cs" Line="39" Column="2" />
+      <File FileName="Assets/Scripts/WeaponToggleScript.cs" Line="16" Column="3" />
+      <File FileName="Assets/Scripts/HidingAI.cs" Line="47" Column="23" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
