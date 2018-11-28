@@ -51,18 +51,6 @@
     <Reference Include="UnityEditor">
       <HintPath>/home/rmart1nez/Unity-2018.2.4f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.StandardEvents.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
@@ -121,16 +109,16 @@
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Multiply Soft.shader" />
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Alpha-Diffuse TintColor.shader" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>/home/rmart1nez/Desktop/Test/cs4555_Homework2_Sci-FI-finalTurnIn/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>/home/rmart1nez/Unity-2018.2.4f1/Projects/cs4555_Homework2_Sci-FI-finalTurnIn/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/home/rmart1nez/Desktop/Test/cs4555_Homework2_Sci-FI-finalTurnIn/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/home/rmart1nez/Unity-2018.2.4f1/Projects/cs4555_Homework2_Sci-FI-finalTurnIn/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>/home/rmart1nez/Desktop/Test/cs4555_Homework2_Sci-FI-finalTurnIn/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>/home/rmart1nez/Unity-2018.2.4f1/Projects/cs4555_Homework2_Sci-FI-finalTurnIn/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/home/rmart1nez/Desktop/Test/cs4555_Homework2_Sci-FI-finalTurnIn/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/home/rmart1nez/Unity-2018.2.4f1/Projects/cs4555_Homework2_Sci-FI-finalTurnIn/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/home/rmart1nez/Unity-2018.2.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

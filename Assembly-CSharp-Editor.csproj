@@ -51,36 +51,21 @@
     <Reference Include="UnityEditor">
       <HintPath>/home/rmart1nez/Unity-2018.2.4f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="JMOAssets">
-      <HintPath>Assets\JMO Assets\Editor\JMOAssets.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\JMO Assets\Cartoon FX Easy Editor\Editor\CFXEasyEditor.cs" />
      <Compile Include="Assets\JMO Assets\WarFX\Editor\CFX_SpawnSystemEditor.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>/home/rmart1nez/Desktop/Test/cs4555_Homework2_Sci-FI-finalTurnIn/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>/home/rmart1nez/Unity-2018.2.4f1/Projects/cs4555_Homework2_Sci-FI-finalTurnIn/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/home/rmart1nez/Desktop/Test/cs4555_Homework2_Sci-FI-finalTurnIn/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/home/rmart1nez/Unity-2018.2.4f1/Projects/cs4555_Homework2_Sci-FI-finalTurnIn/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>/home/rmart1nez/Desktop/Test/cs4555_Homework2_Sci-FI-finalTurnIn/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>/home/rmart1nez/Unity-2018.2.4f1/Projects/cs4555_Homework2_Sci-FI-finalTurnIn/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/home/rmart1nez/Desktop/Test/cs4555_Homework2_Sci-FI-finalTurnIn/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/home/rmart1nez/Unity-2018.2.4f1/Projects/cs4555_Homework2_Sci-FI-finalTurnIn/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/home/rmart1nez/Unity-2018.2.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -323,7 +308,7 @@
  <HintPath>/home/rmart1nez/Unity-2018.2.4f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="JMOAssets">
- <HintPath>/home/rmart1nez/Desktop/Test/cs4555_Homework2_Sci-FI-finalTurnIn/Assets/JMO Assets/Editor/JMOAssets.dll</HintPath>
+ <HintPath>/home/rmart1nez/Unity-2018.2.4f1/Projects/cs4555_Homework2_Sci-FI-finalTurnIn/Assets/JMO Assets/Editor/JMOAssets.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/home/rmart1nez/.config/unity3d/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
