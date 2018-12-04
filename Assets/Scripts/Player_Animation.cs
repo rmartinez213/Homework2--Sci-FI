@@ -22,10 +22,11 @@ public class Player_Animation : MonoBehaviour {
 			_animator.SetBool("isCrouch", !_animator.GetBool("isCrouch"));
 
 			if(_animator.GetBool("isCrouch")){
-				Camera.main.transform.Translate(0, -0.8f, 0.1f);
+				Camera.main.transform.Translate(0.1f, -0.9f, 0.15f);
+                //GameObject.FindGameObjectWithTag("MuzzleFlash").transform.Translate(0,-0.9f,0f);
 			}
 			else{
-				Camera.main.transform.Translate(0, 0.8f, -0.1f);
+				Camera.main.transform.Translate(-0.1f, 0.9f, -0.15f);
 			}
         }
 
